@@ -1,6 +1,5 @@
 package application;
 
-
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
@@ -8,32 +7,27 @@ import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 
-public class CarTab {
-	private Label label;
+public class RaceTab {
+	
 	private final GridPane rootPane;
 	final ToggleGroup washTog = new ToggleGroup();
 	final ToggleGroup chargeTog = new ToggleGroup();	
-	BorderPane bPane = new BorderPane();
-	
-	
-	public CarTab() {
-		rootPane = new GridPane();;
+	public RaceTab() {
+		rootPane = new GridPane();
 		rootPane.setAlignment(Pos.CENTER);
 		
 		
 		Text type = new Text("Vehicle Type:");
 		TextField carField = new TextField();
-		carField.setText("CAR");
+		carField.setText("RACE BIKE");
 		carField.setDisable(true);
 		
 		Text owener = new Text("Customer Name");
@@ -122,9 +116,9 @@ public class CarTab {
 		rootPane.add(save, 2, 3, 6, 7);
 		
 	}
-
-
-
+	
+	
+	
 	public Pane getPane() {
 		return rootPane;
 	}

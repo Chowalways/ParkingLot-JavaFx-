@@ -65,6 +65,13 @@ public class Main extends Application {
 			truckLabel.setPrefWidth(200);
 			truckLabel.setId("truck");
 			truckLabel.setGraphic(truckImgV);
+			truckLabel.setOnMousePressed(new EventHandler<MouseEvent>() {
+				TruckTab truck = new TruckTab();
+				@Override
+				public void handle(MouseEvent event) {
+		           mainPane.setCenter(truck.getPane());
+		        }
+			});
 			
 			//heavy equipment label
 			Image heavyImg = new Image(getClass().getResourceAsStream("heavy.png"));
@@ -75,6 +82,13 @@ public class Main extends Application {
 			heavyLabel.setPrefWidth(200);
 			heavyLabel.setId("heavy");
 			heavyLabel.setGraphic(heavyImgV);
+			heavyLabel.setOnMousePressed(new EventHandler<MouseEvent>() {
+				HeavyTab heavy = new HeavyTab();
+				@Override
+				public void handle(MouseEvent event) {
+		           mainPane.setCenter(heavy.getPane());
+		        }
+			});
 			
 			//trailer label
 			Image trailerImg = new Image(getClass().getResourceAsStream("trail.png"));
@@ -85,6 +99,13 @@ public class Main extends Application {
 			trailerLabel.setPrefWidth(200);
 			trailerLabel.setId("trailer");
 			trailerLabel.setGraphic(trailerImgV);
+			trailerLabel.setOnMousePressed(new EventHandler<MouseEvent>() {
+				TrailerTab trailer = new TrailerTab();
+				@Override
+				public void handle(MouseEvent event) {
+		           mainPane.setCenter(trailer.getPane());
+		        }
+			});
 			
 			//Race Bike Label
 			Image raceImg = new Image(getClass().getResourceAsStream("ninja.png"));
@@ -95,6 +116,13 @@ public class Main extends Application {
 			raceLabel.setPrefWidth(200);
 			raceLabel.setId("race");
 			raceLabel.setGraphic(raceImgV);
+			raceLabel.setOnMousePressed(new EventHandler<MouseEvent>() {
+				RaceTab race = new RaceTab();
+				@Override
+				public void handle(MouseEvent event) {
+		           mainPane.setCenter(race.getPane());
+		        }
+			});
 			
 			//Tricycle label
 			Image triImg = new Image(getClass().getResourceAsStream("tri.png"));
@@ -105,6 +133,13 @@ public class Main extends Application {
 			tricycleLabel.setPrefWidth(200);
 			tricycleLabel.setId("tri");
 			tricycleLabel.setGraphic(tricImgV);
+			tricycleLabel.setOnMousePressed(new EventHandler<MouseEvent>() {
+				TriTab tri = new TriTab();
+				@Override
+				public void handle(MouseEvent event) {
+		           mainPane.setCenter(tri.getPane());
+		        }
+			});
 			
 			//Pedal Label
 			Image pedalImg = new Image(getClass().getResourceAsStream("bike.png"));
@@ -115,6 +150,13 @@ public class Main extends Application {
 			pedalLabel.setPrefWidth(200);
 			pedalLabel.setId("pedal");
 			pedalLabel.setGraphic(pedalImgV);
+			pedalLabel.setOnMousePressed(new EventHandler<MouseEvent>() {
+				PedalTab pedal = new PedalTab();
+				@Override
+				public void handle(MouseEvent event) {
+		           mainPane.setCenter(pedal.getPane());
+		        }
+			});
 			
 			//Other Label
 			Image otherImg = new Image(getClass().getResourceAsStream("other.png"));
