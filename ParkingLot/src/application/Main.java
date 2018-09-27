@@ -2,6 +2,7 @@ package application;
 	
 import javafx.application.Application;
 import javafx.collections.ObservableList;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Orientation;
 import javafx.stage.Screen;
@@ -11,10 +12,10 @@ import javafx.scene.control.Label;
 import javafx.scene.control.Separator;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
-
 
 public class Main extends Application {
 	@Override
@@ -46,6 +47,13 @@ public class Main extends Application {
 			carLabel.setPrefWidth(200);
 			carLabel.setId("car");
 			carLabel.setGraphic(carImgV);
+			carLabel.setOnMousePressed(new EventHandler<MouseEvent>() {
+				CarTab car = new CarTab();
+				@Override
+				public void handle(MouseEvent event) {
+		           mainPane.setCenter(car.getPane());
+		        }
+			});
 		
 			
 			//truck label
